@@ -1,0 +1,197 @@
+/* Geral */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+    margin: 3rem auto;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    text-align: center;
+}
+
+/* Conteúdo principal */
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.titulo-conteudo-principal {
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#tarefa,
+.btn-submit {
+    font-size: 1rem;
+    padding: .8rem;
+    border-radius: .5rem;
+}
+
+#tarefa {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+#tarefa:focus {
+    outline: 0;
+}
+
+#tarefa.erro {
+    border-color: #ff0000;
+}
+
+#tarefa.erro::placeholder {
+    color: #ff0000;
+    opacity: 1;
+}
+
+#msgErroTarefa {
+    display: none;
+    font-size: .9rem;
+    text-align: center;
+    color: #ff0000;
+    margin-top: .5rem;
+}
+
+#msgErroTarefa.ativo {
+    display: block;
+}
+
+.btn-submit {
+    color: #fff;
+    background-color: #008000;
+    border: 1px solid #008000;
+    cursor: pointer;
+    transition: .5s ease;
+    opacity: .9;
+}
+
+.btn-submit:hover {
+    opacity: 1;
+}
+
+#containerTarefas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.tarefa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+}
+
+.marcada {
+    background-color: #b0eeb0;
+}
+
+.marcada .txt-tarefa {
+    text-decoration: line-through;
+}
+
+.box-selecao-tarefa,
+.box-delecao-tarefa {
+    width: 5%;
+}
+
+.icone-selecao-tarefa,
+.bi-trash-fill {
+    cursor: pointer;
+}
+
+.bi-check-circle-fill {
+    color: #008000;
+}
+
+.txt-tarefa {
+    width: 90%;
+}
+
+.box-delecao-tarefa {
+    text-align: right;
+}
+
+.bi-trash-fill {
+    color: #ff0000;
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+}
+
+.creditos-dev {
+    font-style: italic;
+}
+
+.link-creditos {
+    text-decoration: none;
+    color: #0077ff;
+}
+
+.link-creditos:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+
+/* Dispositivos bem pequenos (celulares pequenos, 600px e abaixo) */
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .box-selecao-tarefa,
+    .box-delecao-tarefa {
+        width: 9%;
+    }
+
+    .txt-tarefa {
+        width: 82%;
+    }
+}
+
+/* Dispositivos pequenos (celulares grandes e tablets em modo retrato, 600px e acima) */
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+/* Dispositivos grandes (notebooks e desktops, 992px e acima) */
+@media only screen and (min-width: 992px) {
+    html {
+        font-size: initial;
+    }
+}
